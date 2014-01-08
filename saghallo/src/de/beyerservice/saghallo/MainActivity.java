@@ -27,6 +27,7 @@ public class MainActivity extends Activity implements OnInitListener
 	@Override
 	public void onInit(int arg0)
 	{
+		tts.setLanguage(Locale,GERMAN);
 		tts.speak("Hallo!", TextToSpeech.QUEUE_FLUSH, null);
 
 	}
