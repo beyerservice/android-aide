@@ -28,7 +28,7 @@ public class MainActivity extends Activity implements OnInitListener
 	public void onInit(int arg0)
 	{
 		tts.setLanguage(Locale.GERMAN);
-		tts.speak("Hallo!", TextToSpeech.QUEUE_FLUSH, null);
+		tts.speak("Hallo mein Freund.", TextToSpeech.QUEUE_FLUSH, null);
 
 	}
 
