@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="hello">Hallo Welt!</string>
+    <string name="beschriftung">Was soll ich sagen?</string>
     <string name="app_name">TestApp1</string>
 
 </resources>

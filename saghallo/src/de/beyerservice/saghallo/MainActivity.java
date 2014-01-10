@@ -2,15 +2,14 @@ package de.beyerservice.saghallo;
 
 import android.app.*;
 import android.os.*;
-import android.view.*;
-import android.widget.*;
 import android.speech.tts.*;
-/** das obere tut nicht. Er findet OnInitListener nicht  */
-import android.speech.tts.TextToSpeech;
-import android.speech.tts.TextToSpeech.OnInitListener;
+import android.speech.tts.TextToSpeech.*;
+import android.view.*;
+import android.view.View.*;
+import android.widget.*;
 import java.util.*;
 
-public class MainActivity extends Activity implements OnInitListener
+public class MainActivity extends Activity implements OnInitListener, OnClickListener
 {
 
 	private TextToSpeech tts;
@@ -28,9 +27,19 @@ public class MainActivity extends Activity implements OnInitListener
 	public void onInit(int arg0)
 	{
 		tts.setLanguage(Locale.GERMAN);
-		tts.speak("Hallo was willst du schon wieder?", TextToSpeech.QUEUE_FLUSH, null);
-
+		Button button = (Button) findViewById(R.id.button1);
+		button.setOnClickListener(this);
 	}
+
+	@Override
+	public void onClick(View v)
+	{
+		EditText editText = (EditText)findViewById(R.id.editText1);
+		
+		tts.speak(editText.getText().toString(), TextToSpeech.QUEUE_FLUSH, null);
+		
+	}
+
 
 
 }
